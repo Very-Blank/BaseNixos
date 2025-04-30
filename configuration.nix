@@ -40,6 +40,14 @@
       jack.enable = true;
     };
 
+    actkbd = {
+      enable = true;
+      bindings = [
+        { keys = [ 224 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -U 5"; }
+        { keys = [ 225 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -A 5"; }
+      ];
+    };
+
     openssh.enable = true;
   };
 
@@ -60,6 +68,7 @@
     zsh = {
       enable = true;
     };
+    light.enable = true;
   };
 
   environment.systemPackages = [
