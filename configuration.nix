@@ -93,6 +93,9 @@
     zsh = {
       enable = true;
     };
+    light = {
+      enable = true;
+    };
   };
 
   environment.systemPackages = [
