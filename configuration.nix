@@ -43,11 +43,6 @@
     openssh.enable = true;
   };
 
-  programs = {
-    light.enable = true;
-    zsh.enable = true;
-  };
-
   hardware = {
     bluetooth = {
       enable = true;
