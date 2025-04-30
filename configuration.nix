@@ -61,13 +61,6 @@
       enable = true;
       powerOnBoot = true;
     };
-
-    tuxedo-rs = {
-      enable = true;
-      tailor-gui.enable = true;
-    };
-
-    tuxedo-drivers.enable = true;
   };
 
   users.users.blank = {
