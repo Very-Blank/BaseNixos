@@ -11,7 +11,8 @@
   boot.loader.grub.useOSProber = true;
   boot.loader.grub.efiSupport = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot";
+  boot.loader.efi.efiSysMountPoint = "/efi";
+  boot.loader.systemd-boot.xbootldrMountPoint = "/boot";
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
