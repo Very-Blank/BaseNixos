@@ -56,6 +56,12 @@
     shell = pkgs.zsh;
   };
 
+  programs = {
+    zsh = {
+      enable = true;
+    };
+  };
+
   environment.systemPackages = [
     pkgs.home-manager
     pkgs.vim
