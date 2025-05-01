@@ -16,6 +16,7 @@
             height = 1080;
             refresh = 74.973;
           };
+          scale = 0.9;
         };
 
         "Samsung Electric Company LS32AG32x H9JT200575   " = {
@@ -24,6 +25,7 @@
             height = 1080;
             refresh = 164.955;
           };
+          scale = 0.8;
         };
       };
 
