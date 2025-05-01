@@ -25,7 +25,7 @@
             height = 1080;
             refresh = 164.955;
           };
-          scale = 0.8;
+          scale = 0.9;
         };
       };
 
