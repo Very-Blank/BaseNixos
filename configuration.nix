@@ -65,7 +65,7 @@
       enable = true;
       tailor-gui.enable = true;
     };
-    
+  
     tuxedo-drivers.enable = true;
   };
 
@@ -80,7 +80,9 @@
       enable = true;
     };
 
-    light.enable = true;
+    light = {
+      enable = true;
+    };
   };
 
   environment.systemPackages = [
