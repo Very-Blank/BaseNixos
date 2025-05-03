@@ -83,7 +83,6 @@
       enable = true;
       tailor-gui.enable = true;
     };
-
     tuxedo-drivers.enable = true;
   };
 
@@ -95,9 +94,6 @@
 
   programs = {
     zsh = {
-      enable = true;
-    };
-    light = {
       enable = true;
     };
   };
