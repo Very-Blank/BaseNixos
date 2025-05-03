@@ -51,10 +51,6 @@
     openssh.enable = true;
   };
 
-  programs = {
-    light.enable = true;
-  };
-
   hardware = {
     bluetooth = {
       enable = true;
