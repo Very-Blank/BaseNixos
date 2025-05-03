@@ -51,10 +51,6 @@
     openssh.enable = true;
   };
 
-  programs = {
-    light.enable = true;
-  };
-
   hardware = {
     bluetooth = {
       enable = true;
@@ -79,6 +75,8 @@
     zsh = {
       enable = true;
     };
+
+    light.enable = true;
   };
 
   environment.systemPackages = [
