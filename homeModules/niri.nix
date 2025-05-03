@@ -153,8 +153,7 @@
         "Mod+C".action = center-column;
         "Mod+V".action = toggle-window-floating;
 
-        "Mod+Shift+S".action = screenshot;
-        "Print".action.screenshot-screen = [];
+        "Print".action = screenshot;
         "Mod+Print".action = screenshot-window;
 
         "XF86AudioRaiseVolume".action = sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+";
