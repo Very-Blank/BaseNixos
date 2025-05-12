@@ -73,7 +73,7 @@
       pkgs.font-awesome
       pkgs.powerline-fonts
       pkgs.powerline-symbols
-      pkgs.nerd-fonts._0xProto
+      pkgs.nerd-fonts._0xproto
     ];
   };
 
