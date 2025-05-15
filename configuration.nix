@@ -43,18 +43,6 @@
     openssh.enable = true;
   };
 
-  systemd.user.services.network-manager-applet = {
-    partOf = [ "graphical-session.target" ];
-    after = [ "graphical-session.target" ];
-    wantedBy = [ "graphical-session.target" ];
-  };
-
-  systemd.user.services.blueman-applet = {
-    partOf = [ "graphical-session.target" ];
-    after = [ "graphical-session.target" ];
-    wantedBy = [ "graphical-session.target" ];
-  };
-
   hardware = {
     bluetooth = {
       enable = true;
