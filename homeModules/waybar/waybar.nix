@@ -1,35 +1,35 @@
-{pkgs, ...}:
+{...}:
 
 {
-  systemd.user.services.nm-applet = {
-    Unit = {
-      Description = "Nm-applet service";
-      PartOf = [ "graphical-session.target" ];
-      After = [ "graphical-session.target" ];
-    };
-    Service = {
-      ExecStart = "${pkgs.networkmanagerapplet}/bin/nm-applet";
-      Restart = "always";
-    };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-    };
-  };
-
-  systemd.user.services.blueman-applet = {
-    Unit = {
-      Description = "Blueman-applet service";
-      PartOf = [ "graphical-session.target" ];
-      After = [ "graphical-session.target" ];
-    };
-    Service = {
-      ExecStart = "${pkgs.blueman}/bin/blueman-applet";
-      Restart = "always";
-    };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-    };
-  };
+  # systemd.user.services.nm-applet = {
+  #   Unit = {
+  #     Description = "Nm-applet service";
+  #     PartOf = [ "graphical-session.target" ];
+  #     After = [ "graphical-session.target" ];
+  #   };
+  #   Service = {
+  #     ExecStart = "${pkgs.networkmanagerapplet}/bin/nm-applet";
+  #     Restart = "always";
+  #   };
+  #   Install = {
+  #     WantedBy = [ "graphical-session.target" ];
+  #   };
+  # };
+  #
+  # systemd.user.services.blueman-applet = {
+  #   Unit = {
+  #     Description = "Blueman-applet service";
+  #     PartOf = [ "graphical-session.target" ];
+  #     After = [ "graphical-session.target" ];
+  #   };
+  #   Service = {
+  #     ExecStart = "${pkgs.blueman}/bin/blueman-applet";
+  #     Restart = "always";
+  #   };
+  #   Install = {
+  #     WantedBy = [ "graphical-session.target" ];
+  #   };
+  # };
   
   programs.waybar = {
     enable = true;
