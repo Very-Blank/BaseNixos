@@ -43,6 +43,21 @@
     openssh.enable = true;
   };
 
+  systemd.user.targets.tray = {
+    Unit = {
+      Description = "Home Manager System Tray";
+      Requires = [ "graphical-session-pre.target" ];
+    }; 
+  };
+
+  systemd.user.services.network-manager-applet = {
+    After = [ "tray.service" ];
+  };
+
+  systemd.user.services.blueman-applet = {
+    After = [ "tray.service" ];
+  };
+
   hardware = {
     bluetooth = {
       enable = true;
