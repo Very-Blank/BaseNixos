@@ -44,13 +44,15 @@
   };
 
   systemd.user.services.network-manager-applet = {
-    partof = [ "graphical-session.target" ];
+    partOf = [ "graphical-session.target" ];
     after = [ "graphical-session.target" ];
+    wantedBy = [ "graphical-session.target" ];
   };
 
   systemd.user.services.blueman-applet = {
-    partof = [ "graphical-session.target" ];
+    partOf = [ "graphical-session.target" ];
     after = [ "graphical-session.target" ];
+    wantedBy = [ "graphical-session.target" ];
   };
 
   hardware = {
