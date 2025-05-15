@@ -68,6 +68,7 @@
     pkgs.wget
     pkgs.unzip
     pkgs.seatd
+    pkgs.pavucontrol
   ];
 
   fonts = {
