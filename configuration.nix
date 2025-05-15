@@ -44,9 +44,9 @@
   };
 
   systemd.user.targets.tray = {
-    Unit = {
-      Description = "Home Manager System Tray";
-      Requires = [ "graphical-session-pre.target" ];
+    unit = {
+      description = "Home Manager System Tray";
+      requires = [ "graphical-session-pre.target" ];
     }; 
   };
 
