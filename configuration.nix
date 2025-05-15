@@ -43,19 +43,12 @@
     openssh.enable = true;
   };
 
-  systemd.user.targets.tray = {
-    unit = {
-      description = "Home Manager System Tray";
-      requires = [ "graphical-session-pre.target" ];
-    }; 
-  };
-
   systemd.user.services.network-manager-applet = {
-    after = [ "tray.service" ];
+    after = [ "graphical-session.target" ];
   };
 
   systemd.user.services.blueman-applet = {
-    after = [ "tray.service" ];
+    after = [ "graphical-session.target" ];
   };
 
   hardware = {
