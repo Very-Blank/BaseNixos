@@ -1,11 +1,15 @@
 {...}:
 {
-  services.mako.settings = {
+  services.mako = {
     enable = true;
-    default-timeout = 1500;
-    backgroundColor = "#2b3645";
-    font = "0xProtoNerdFont-Regular 10";
-    border-radius = 10;
-    border-size = 0;
+
+    settings = {
+      default-timeout = 1500;
+      backgroundColor = "#7c818c";
+      font = "0xProtoNerdFont-Regular 10";
+      border-radius = 10;
+      border-size = 0;
+    };
   };
+
 }
