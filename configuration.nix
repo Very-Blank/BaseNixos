@@ -79,7 +79,7 @@
       pkgs.font-awesome
       pkgs.powerline-fonts
       pkgs.powerline-symbols
-      (pkgs.nerdfonts.override { fonts = [ "0xProto" ]; })
+      pkgs.nerd-fonts._0xproto
     ];
   };
 
