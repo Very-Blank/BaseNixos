@@ -51,11 +51,11 @@
   };
 
   systemd.user.services.network-manager-applet = {
-    After = [ "tray.service" ];
+    after = [ "tray.service" ];
   };
 
   systemd.user.services.blueman-applet = {
-    After = [ "tray.service" ];
+    after = [ "tray.service" ];
   };
 
   hardware = {
