@@ -56,12 +56,19 @@
     shell = pkgs.zsh;
   };
 
+  programs = {
+    zsh = {
+      enable = true;
+    };
+  };
+
   environment.systemPackages = [
     pkgs.home-manager
     pkgs.vim
     pkgs.wget
     pkgs.unzip
     pkgs.seatd
+    pkgs.pavucontrol
   ];
 
   fonts = {

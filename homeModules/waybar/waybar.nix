@@ -30,7 +30,7 @@
       WantedBy = [ "graphical-session.target" ];
     };
   };
-  
+
   programs.waybar = {
     enable = true;
     settings = {

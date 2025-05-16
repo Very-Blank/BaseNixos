@@ -18,6 +18,9 @@
       rr = "rm -r";
 
       gca = "git commit -a";
+      gc = "git checkout";
+      grm = "git rebase main";
+      gcb = "git checkout -b";
       gsm = "git push origin main";
       glm = "git pull origin main";
 
