@@ -16,6 +16,10 @@
       pkgs.python3
       pkgs.gnumake
       pkgs.wayland-scanner
+      pkgs.wayland-client
+      pkgs.wayland-cursor
+      pkgs.wayland-egl
+      pkgs.xkbcommon
       pkgs.pkg-config
     ];
 
