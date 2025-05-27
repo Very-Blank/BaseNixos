@@ -14,6 +14,7 @@
       pkgs.gcc
       pkgs.neofetch
       pkgs.python3
+      pkgs.make
     ];
 
     pointerCursor = {
