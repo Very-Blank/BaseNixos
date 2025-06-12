@@ -1,12 +1,13 @@
 {nvim, pkgs, ...}:
 
 {
+  home.packages = [
+    pkgs.lua-language-server
+  ];
+
   programs.neovim = {
     enable = true;
     defaultEditor = true;
-    extraPackages = [
-      pkgs.lua-language-server
-    ];
   };
 
   xdg.configFile."nvim" = {
