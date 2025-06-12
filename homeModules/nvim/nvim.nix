@@ -5,7 +5,7 @@
     enable = true;
     defaultEditor = true;
     extraPackages =  [
-      pkgs.lua-language-server
+      pkgs.sumneko-lua-language-server
     ];
   };
 
