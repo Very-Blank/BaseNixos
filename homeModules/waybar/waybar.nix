@@ -130,7 +130,7 @@
           min-length = 7;
         };
 
-        battery = {
+        "battery" = {
           interval = 2;
           states = { warning = 30; critical = 15;
           };
@@ -141,7 +141,7 @@
           format-icons = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
         };
 
-        tray = {
+        "tray" = {
           icon-size = 14;
           spacing = 10;
         };
