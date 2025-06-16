@@ -4,12 +4,13 @@
   systemd.user.services.nm-applet = {
     Unit = {
       Description = "Nm-applet service";
-      PartOf = [ "graphical-session.target" ];
-      After = [ "graphical-session.target" ];
+      PartOf = [ "graphical-session.target"  "dbus.socket" ];
+      After = [ "graphical-session.target"  "dbus.socket" ];
     };
     Service = {
       ExecStart = "${pkgs.networkmanagerapplet}/bin/nm-applet";
-      Restart = "always";
+      Restart     = "on-failure";
+      RestartSec  = "5s";
     };
     Install = {
       WantedBy = [ "graphical-session.target" ];
@@ -19,12 +20,13 @@
   systemd.user.services.blueman-applet = {
     Unit = {
       Description = "Blueman-applet service";
-      PartOf = [ "graphical-session.target" ];
-      After = [ "graphical-session.target" ];
+      PartOf = [ "graphical-session.target"  "dbus.socket" ];
+      After = [ "graphical-session.target"  "dbus.socket" ];
     };
     Service = {
       ExecStart = "${pkgs.blueman}/bin/blueman-applet";
-      Restart = "always";
+      Restart     = "on-failure";
+      RestartSec  = "5s";
     };
     Install = {
       WantedBy = [ "graphical-session.target" ];
@@ -41,7 +43,7 @@
         modules-center = ["clock"];
 
         modules-left = ["niri/workspaces" "niri/language" "keyboard-state" "custom/poweroff" "custom/hibernate" "custom/reboot"];
-        modules-right = ["pulseaudio" "custom/mem" "cpu" "backlight" "battery" "tray"];
+        modules-right = ["pulseaudio" "memory" "cpu" "backlight" "battery" "tray"];
 
         "niri/language" = {
           format-en = "US";
@@ -100,11 +102,9 @@
           min-length = 13;
         };
 
-        "custom/mem" = {
-          format = "{} ";
-          interval = 3;
-          exec = "free -h | awk '/Mem:/{printf $3}'";
-          tooltip = false;
+        "memory" = {
+          interval =  30;
+          format = "{}% ";
         };
 
         "cpu" = {
@@ -142,7 +142,7 @@
         };
 
         "tray" = {
-          icon-size = 14;
+          icon-size = 20;
           spacing = 10;
         };
       };
