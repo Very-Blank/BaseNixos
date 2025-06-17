@@ -33,12 +33,6 @@
       };
 
       theme = "sddm-astronaunt-theme";
-
-      extraPackages = with pkgs; [
-        kdePackages.qtsvg
-        kdePackages.qtvirtualkeyboard
-        kdePackages.qtmultimedia
-      ];
     };
 
     pipewire = {
