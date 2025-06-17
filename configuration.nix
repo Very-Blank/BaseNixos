@@ -30,7 +30,6 @@
 
       wayland = {
         enable = true;
-        compositor = "niri";
       };
 
       theme = "sddm-astronaunt-theme";
@@ -78,7 +77,7 @@
   };
 
   environment.systemPackages = [
-    pkgs.sddm-astronaut.override { embeddedTheme = "cyberpunk"; }
+    (pkgs.sddm-astronaut.override { embeddedTheme = "cyberpunk"; })
     pkgs.home-manager
     pkgs.vim
     pkgs.wget
