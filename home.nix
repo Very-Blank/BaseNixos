@@ -15,15 +15,6 @@
       pkgs.neofetch
       pkgs.python3
       pkgs.gnumake
-
-      # Dev libs
-      pkgs.xorg.libX11
-      pkgs.xorg.libXext
-      pkgs.xorg.libXrender
-      pkgs.xorg.libXrandr
-      pkgs.xorg.libXcursor
-      pkgs.xorg.libXi
-      pkgs.libGL
     ];
 
     pointerCursor = {
