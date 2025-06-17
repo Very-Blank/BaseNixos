@@ -13,7 +13,7 @@
   nix.gc = {
     automatic = true;
     dates = "weekly";
-    options = "--delete-older-than 5d";
+    options = "--delete-older-than 2d";
   };
 
   networking = {
@@ -25,7 +25,22 @@
 
   services = {
     blueman.enable = true;
-    displayManager.ly.enable = true;
+    displayManager.sddm = {
+      enable = true;
+
+      wayland = {
+        enable = true;
+        compositor = "niri";
+      };
+
+      theme = "sddm-astronaunt-theme";
+
+      extraPackages = with pkgs; [
+        kdePackages.qtsvg
+        kdePackages.qtvirtualkeyboard
+        kdePackages.qtmultimedia
+      ];
+    };
 
     pipewire = {
       enable = true;
@@ -63,6 +78,7 @@
   };
 
   environment.systemPackages = [
+    pkgs.sddm-astronaut.override { embeddedTheme = "cyberpunk"; }
     pkgs.home-manager
     pkgs.vim
     pkgs.wget
