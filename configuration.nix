@@ -26,12 +26,15 @@
   services = {
     blueman.enable = true;
     displayManager.sddm = {
+      package = pkgs.kdePackages.sddm;
       enable = true;
 
       wayland = {
         enable = true;
         compositor = "weston";
       };
+
+      extraPackages = [(pkgs.sddm-astronaut.override { embeddedTheme = "cyberpunk"; })];
 
       theme = "sddm-astronaunt-theme";
     };
