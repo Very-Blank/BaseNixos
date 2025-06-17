@@ -34,9 +34,16 @@
         compositor = "weston";
       };
 
-      extraPackages = [(pkgs.sddm-astronaut.override { embeddedTheme = "cyberpunk"; })];
-
       theme = "sddm-astronaunt-theme";
+      settings = {
+        Theme = {
+          Current = "sddm-astronaut-theme";
+          CursorTheme = "Bibata-Original-Classic";
+          CursorSize = 16;
+        };
+      };
+
+      extraPackages = [(pkgs.sddm-astronaut.override { embeddedTheme = "cyberpunk"; })];
     };
 
     pipewire = {
