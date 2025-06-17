@@ -30,6 +30,7 @@
 
       wayland = {
         enable = true;
+        compositor = "weston";
       };
 
       theme = "sddm-astronaunt-theme";
