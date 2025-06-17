@@ -26,24 +26,23 @@
   services = {
     blueman.enable = true;
     displayManager.sddm = {
-      package = pkgs.kdePackages.sddm;
       enable = true;
+      theme = "catppuccin-mocha";
 
       wayland = {
         enable = true;
         compositor = "weston";
       };
 
-      theme = "sddm-astronaunt-theme";
       settings = {
         Theme = {
-          Current = "sddm-astronaut-theme";
+          Current = "catppuccin-mocha";
           CursorTheme = "Bibata-Original-Classic";
           CursorSize = 16;
         };
       };
 
-      extraPackages = [(pkgs.sddm-astronaut.override { embeddedTheme = "cyberpunk"; })];
+      package = pkgs.kdePackages.sddm;
     };
 
     pipewire = {
@@ -59,6 +58,14 @@
       jack.enable = true;
     };
 
+    actkbd = {
+      enable = true;
+      bindings = [
+        { keys = [ 224 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -U 5"; }
+        { keys = [ 225 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -A 5"; }
+      ];
+    };
+
     openssh.enable = true;
   };
 
@@ -67,6 +74,13 @@
       enable = true;
       powerOnBoot = true;
     };
+
+    tuxedo-rs = {
+      enable = true;
+      tailor-gui.enable = true;
+    };
+
+    tuxedo-drivers.enable = true;
   };
 
   users.users.blank = {
@@ -79,10 +93,19 @@
     zsh = {
       enable = true;
     };
+    light = {
+      enable = true;
+    };
   };
 
   environment.systemPackages = [
-    (pkgs.sddm-astronaut.override { embeddedTheme = "cyberpunk"; })
+    (pkgs.catppuccin-sddm.override {
+      flavor = "macchiato";
+      font  = "Noto Sans";
+      fontSize = "9";
+      # background = "${./wallpaper.png}";
+      loginBackground = true;
+    })
     pkgs.home-manager
     pkgs.vim
     pkgs.wget
