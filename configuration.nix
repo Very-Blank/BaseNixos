@@ -27,7 +27,7 @@
     blueman.enable = true;
     displayManager.sddm = {
       enable = true;
-      theme = "catppuccin-mocha";
+      theme = "catppuccin-macchiato";
 
       wayland = {
         enable = true;
@@ -36,7 +36,7 @@
 
       settings = {
         Theme = {
-          Current = "catppuccin-mocha";
+          Current = "catppuccin-macchiato";
           CursorTheme = "Bibata-Original-Classic";
           CursorSize = 16;
         };
