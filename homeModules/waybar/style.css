@@ -133,8 +133,8 @@ window#waybar.hidden {
 }
 
 #battery.charging {
-    color: @base05;
     background-color: @base0B;
+    color: @base00;
 }
 
 #battery.warning:not(.charging) {
