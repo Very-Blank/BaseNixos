@@ -10,5 +10,6 @@
     ./ghostty.nix
     ./firefox.nix
     ./nvim/nvim.nix
+    ./stylix.nix
   ];
 }

@@ -50,8 +50,8 @@
       package = pkgs.papirus-icon-theme;
     };
     theme = {
-      name = "Materia-dark";
-      package = pkgs.materia-theme;
+      name = "Catppuccin-macchiato-blue-compact";
+      package = pkgs.magnetic-catppuccin-gtk;
     };
   };
 }

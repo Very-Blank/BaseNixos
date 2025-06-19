@@ -11,6 +11,11 @@
 
     niri.url = "github:sodiboo/niri-flake";
 
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nvim = {
       url = "github:Very-Blank/nvim";
       flake = false;
@@ -18,7 +23,7 @@
   };
 
   outputs = inputs: let
-    inherit (inputs) home-manager nixpkgs niri nvim;
+    inherit (inputs) home-manager nixpkgs niri nvim stylix;
     system = "x86_64-linux"; in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       inherit system;
@@ -34,6 +39,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
       modules = [
         ./home.nix
+        stylix.homeModules.stylix
         niri.homeModules.niri
       ];
 
