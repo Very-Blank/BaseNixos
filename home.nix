@@ -49,9 +49,9 @@
       name = "Papirus";
       package = pkgs.papirus-icon-theme;
     };
-    theme = {
-      name = "Catppuccin-macchiato-blue-compact";
-      package = pkgs.magnetic-catppuccin-gtk;
-    };
+    # theme = {
+    #   name = "Catppuccin-macchiato-blue-compact";
+    #   package = pkgs.magnetic-catppuccin-gtk;
+    # };
   };
 }
