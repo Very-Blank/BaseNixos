@@ -144,7 +144,7 @@ window#waybar.hidden {
 
 #battery.critical:not(.charging) {
     background-color: @base08;
-    color: @base05;
+    color: @base00;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
