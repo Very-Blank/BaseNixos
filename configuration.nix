@@ -101,8 +101,8 @@
   environment.systemPackages = [
     (pkgs.catppuccin-sddm.override {
       flavor = "macchiato";
-      font  = "Noto Sans";
-      fontSize = "9";
+      font  = "0xProto Nerd Mono Font";
+      fontSize = "14";
       # background = "${./wallpaper.png}";
       loginBackground = true;
     })
